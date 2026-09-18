@@ -3,29 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="DATOS/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
     <link rel="icon" href="DATOS/img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        body {
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .greetings {
+            font-size: 6rem;
+            font-weight: 900;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .greetings > span {
+            display: inline-block;
+            color: #ffffff;
+            text-shadow:
+                0 0 12px #ffffff,
+                0 0 50px #ffffff,
+                0 0 100px #ffffff;
+            animation: glow-blanco 2.5s ease-in-out infinite;
+        }
+
+        @keyframes glow-blanco {
+            0%, 100% {
+                color: #ffffff;
+                text-shadow:
+                    0 0 12px #ffffff,
+                    0 0 50px #ffffff,
+                    0 0 100px #ffffff;
+            }
+            10%, 90% {
+                color: #999999;
+                text-shadow: none;
+            }
+        }
+
+        /* Delays escalonados para el efecto de brillo */
+        .greetings > span:nth-child(2)  { animation-delay: .2s; }
+        .greetings > span:nth-child(3)  { animation-delay: .4s; }
+        .greetings > span:nth-child(4)  { animation-delay: .6s; }
+        .greetings > span:nth-child(5)  { animation-delay: .8s; }
+        .greetings > span:nth-child(6)  { animation-delay: 1s; }
+        .greetings > span:nth-child(7)  { animation-delay: 1.2s; }
+        .greetings > span:nth-child(8)  { animation-delay: 1.4s; }
+        .greetings > span:nth-child(9)  { animation-delay: 1.6s; }
+        .greetings > span:nth-child(10) { animation-delay: 1.8s; }
+        .greetings > span:nth-child(11) { animation-delay: 2s; }
+        .greetings > span:nth-child(12) { animation-delay: 2.2s; }
+        .greetings > span:nth-child(13) { animation-delay: 2.4s; }
+        .greetings > span:nth-child(14) { animation-delay: 2.6s; }
+        .greetings > span:nth-child(15) { animation-delay: 2.8s; }
+
+        .greetings .espacio {
+            display: inline-block;
+            width: 2rem;
+        }
+
+        .description {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-align: center;
+            text-shadow:
+                0 0 8px rgba(255, 255, 255, 0.9),
+                0 0 16px rgba(255, 255, 255, 0.6);
+        }
+
+        .button button {
+            background-color: #ffffff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+
+        .button button a {
+            text-decoration: none;
+            color: #111;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .button button:hover {
+            background-color: #ffe066;
+            box-shadow:
+                0 0 10px #ffffff,
+                0 0 20px #ffffff,
+                0 0 30px #ffffff;
+            transform: scale(1.05);
+        }
+
+        .button button:active {
+            transform: scale(0.97);
+        }
+
+        /* 📱 Responsive móvil */
+        @media screen and (max-width: 574px) {
+            .greetings {
+                font-size: 2.6rem;
+                font-weight: 700;
+                padding: 0 10px;
+                line-height: 1.2;
+            }
+            .greetings .espacio {
+                width: 0.8rem;
+            }
+            .description {
+                font-size: 1rem;
+                margin-bottom: 22px;
+            }
+            .button button {
+                font-size: 15px;
+                padding: 12px 22px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .greetings {
+                font-size: 2rem;
+            }
+            .description {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ♿ Reducir movimiento */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- HOLA -->
     <div class="greetings">
         <span>H</span>
         <span>O</span>
         <span>L</span>
         <span>A</span>
     </div>
+
+    <!-- MI ASHU HERMOSA -->
     <div class="greetings">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+        <span>M</span>
+        <span>I</span>
+        <span class="espacio"></span>
+        <span>A</span>
+        <span>S</span>
+        <span>H</span>
+        <span>U</span>
+        <span class="espacio"></span>
+        <span>H</span>
+        <span>E</span>
+        <span>R</span>
+        <span>M</span>
+        <span>O</span>
+        <span>S</span>
+        <span>A</span>
     </div>
+
     <div class="description">
         <span>SON PARA TI &lt;3</span>
     </div>
+
     <div class="button">
         <button>
             <a href="DATOS/FLORES.html">CLICK PLEASE</a>
